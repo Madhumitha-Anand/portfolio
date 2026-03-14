@@ -1,8 +1,8 @@
-// .prettierrc.mjs
+// @ts-check
+
 /** @type {import("prettier").Config} */
 export default {
   plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-  tailwindStylesheet: "./src/styles/global.css",
   overrides: [
     {
       files: "*.astro",
@@ -11,4 +11,9 @@ export default {
       },
     },
   ],
+  semi: true,
+  singleQuote: false,
+  tabWidth: 2,
+  trailingComma: "es5",
+  printWidth: 100,
 };

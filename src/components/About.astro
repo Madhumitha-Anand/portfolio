@@ -1,26 +1,32 @@
 ---
-import Section from "./Section.astro";
-import { Image } from "astro:assets";
-import type { AboutProps, HeroProps } from "@types";
-
-type Props = AboutProps & Pick<HeroProps, "name">;
-
-const { description, image, name } = Astro.props;
+import { ABOUT } from "@config";
 ---
 
-<Section text="About Me" href="about">
-  <div class="flex flex-col items-center gap-12 md:flex-row md:gap-8">
-    <p class="w-auto text-base text-neutral md:pr-5">{description}</p>
-    <div
-      class="h-80 w-64 flex-shrink-0 rotate-[5deg] bg-white p-4 md:rotate-[7deg]"
-    >
-      <Image
-        class="object-cover"
-        src={image}
-        width="260"
-        height="260"
-        alt={name}
-      />
+<section id="about" class="py-24 px-6 bg-[var(--color-surface)] border-t border-[var(--color-border)]">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+
+    <!-- Label -->
+    <div class="reveal">
+      <p class="text-xs tracking-[0.2em] uppercase text-[var(--color-accent)] mb-2">Who I Am</p>
+      <h2 class="font-display text-4xl">About<br/>Me</h2>
     </div>
+
+    <!-- Content -->
+    <div class="reveal">
+      {ABOUT.paragraphs.map((p) => (
+        <p class="text-[var(--color-text-muted)] leading-relaxed mb-5 text-base">{p}</p>
+      ))}
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10 pt-10 border-t border-[var(--color-border)]">
+        {ABOUT.stats.map((s) => (
+          <div>
+            <p class="font-display text-3xl text-[var(--color-text)]">{s.value}</p>
+            <p class="text-xs text-[var(--color-text-muted)] mt-1 tracking-wide">{s.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
   </div>
-</Section>
+</section>

@@ -1,98 +1,241 @@
-import type { SiteConfig, SiteContent } from "../types";
 
-export const SITE_CONFIG: SiteConfig = {
-  title: "Alejandro Múnez — Mobile & Web Developer",
-  author: "Alejandro Múnez Cuntez",
+export const SITE = {
+  title: "Madhumitha Anand",
+  tagline: "AI & Data Science Engineer",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-  lang: "en",
-  siteLogo: "/alejandro-small.jpg",
-  navLinks: [
-    { text: "Experience", href: "#experience" },
-    { text: "Projects", href: "#projects" },
-    { text: "About", href: "#about" },
-  ],
-  socialLinks: [
-    { text: "Twitter", href: "https://github.com/immois/astro-zen" },
-    { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
-    { text: "Github", href: "https://github.com/immois/astro-zen" },
-    { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-    { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
-  ],
-  socialImage: "/zen-og.png",
-  canonicalURL: "https://astro-zen.vercel.app",
+    "Undergraduate portfolio of Madhumitha Anand — AI & Data Science engineering student passionate about building intelligent systems.",
+  url: "https://madhumitha.dev", // ← change to your deployed URL
+  email: "madhumithaa10a@gmail.com", // ← your email
+  locale: "en-US",
 };
 
-export const SITE_CONTENT: SiteContent = {
-  hero: {
-    name: "Alejandro Múnez",
-    specialty: "Mobile & Web Developer",
-    summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-    email: "example@email.com",
+export const HERO = {
+  greeting: "Hello, I am",
+  name: "MADHUMITHA ANAND",
+  role: "AI & DS Engineering Undergraduate",
+  bio: "Exploring intelligence through data, models, and experimentation. Currently pursuing a B.Tech in Artificial Intelligence and Data Science, with a strong interest in machine learning and intelligent systems. Interested in creating systems that learn, adapt, and solve real-world problems that focuses on growth, innovation, and meaningful technology.",
+  availability: "Open to internships & full-time roles from 2025",
+  cta: {
+    primary: { label: "View My Work", href: "#projects" },
+    secondary: { label: "Get In Touch", href: "#contact" },
   },
-  experience: [
-    {
-      company: "Zalmart",
-      position: "Lead Android Developer",
-      startDate: "May 2018",
-      endDate: "Sept 2020",
-      summary: [
-        "Implemented advanced memory management and code optimization techniques, resulting in a reduction in application load time by 40% and a decrease in crashes by 25%. This significantly improved user experience and increased user retention by 20%.",
-        "I led a team of developers in building and integrating new features using Jetpack Android components such as LiveData and ViewModel. This enabled us to build scalable and maintainable applications, reducing the crash rate by 20% and speeding up the time to delivery of new features by 15%.",
-        "Integrated Google Pay for in-app purchases, resulting in a 35% increase in mobile transaction revenue. Additionally, implemented Firebase Analytics to gain insights into user behavior, enabling data-driven optimizations and a 30% increase in user retention.",
-      ],
-    },
-    {
-      company: "Bankit",
-      position: "Mobile Developer",
-      startDate: "Feb 2017",
-      endDate: "May 2018",
-      summary: [
-        "I designed and developed a mobile application using Flutter, allowing it to be deployed on both Android and iOS with a single codebase. This reduced development time by 50% and maintenance costs by 30%, facilitating a consistent user experience on both platforms.",
-        "I integrated biometric authentication and data encryption, significantly improving the security of user data. This implementation resulted in a 40% increase in user trust and a 25% reduction in unauthorized access attempts.",
-      ],
-    },
-    {
-      company: "Driveer",
-      position: "Frontend Developer",
-      startDate: "Jun 2015",
-      endDate: "Oct 2016",
-      summary:
-        "Developed and integrated a real-time vehicle tracking system using WebSockets, improving accuracy and data update in the application. This functionality increased user satisfaction by 30% and reduced customer service inquiries by 25%.",
-    },
-  ],
-  projects: [
-    {
-      name: "Spotifu Music",
-      summary: "A music streaming app that emulates Spotify's core features.",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/spotifu.png",
-    },
-    {
-      name: "Shopp App",
-      summary: "An e-commerce platform that replicates Shopify's key features.",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/shopify-clon.png",
-    },
-    {
-      name: "ClonTagram",
-      summary: "A social network that replicates the features of Instagram",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/clone-ig.png",
-    },
-  ],
-  about: {
-    description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
-
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
-    `,
-    image: "/alejandro-big.jpg",
-  },
+  // Path to your profile photo inside /public/
+  avatar: "/avatar.jpg",
 };
 
-// #5755ff
+export const ABOUT = {
+  paragraphs: [
+    "I'm a final-year AI & Data Science undergraduate with a deep love for machine learning research, neural networks, and real-world AI applications. I believe the most impactful technology is the kind that solves genuine human problems.",
+    "Outside academics, I enjoy experimenting with new ideas, improving my technical skills through projects, and learning more about data science through practical exploration. I actively look for opportunities to apply my knowledge in meaningful ways.",
+  ],
+  // Your quick stats
+  stats: [
+    { label: "GPA", value: "8.7 / 10" },      // ← update
+    { label: "Projects", value: "10+" },
+    { label: "Certifications", value: "15+" },
+    { label: "Hackathons", value: "5" },
+  ],
+};
+
+// ── SKILLS ──────────────────────────────────────────────────
+// Group your technical skills into categories
+export const SKILLS: SkillCategory[] = [
+  {
+    category: "Languages",
+    items: ["Python", "R", "SQL", "Java", "C++"],
+  },
+  {
+    category: "ML / AI",
+    items: [
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "Keras",
+    ],
+  },
+  {
+    category: "Data & Analytics",
+    items: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Tableau", "Power BI"],
+  },
+  {
+    category: "Tools & Platforms",
+    items: ["Git", "Docker", "AWS (S3, SageMaker)", "Jupyter", "FastAPI", "Streamlit"],
+  },
+  {
+    category: "Databases",
+    items: ["PostgreSQL", "MongoDB", "MySQL"],
+  },
+];
+
+// ── PROJECTS ─────────────────────────────────────────────────
+// Add as many projects as you want — they appear as cards
+export const PROJECTS: Project[] = [
+  {
+    title: "Customer Behavior Modeling with K-Means Clustering",
+    description:
+      "Applied RFM analysis and K-Means clustering to segment customers based on purchasing behavior. Identified key customer groups from 50K+ records to enable data-driven marketing strategies.",
+    tags: ["Python", "Pandas", "Scikit-learn", "RFM Analysis", "K-means", "Data Visualisation"],
+    image: "/projects/medisense.jpg", // place image in /public/projects/
+    github: "https://github.com/Madhumitha-Anand/CustomerSegmentation.git",
+    demo: "",
+    featured: true,
+  },
+  {
+    title: "Mental Health Keyword Intensity Analyzer",
+    description:
+      "Developed an NLP-based tool to analyze text and measure intensity of mental-health-related keywords using normalized scoring. Implemented preprocessing and keyword analysis to generate instant, privacy-focused insights from user input text.",
+    tags: ["Python", "NLP", "Regex", "Text Processing", "CLI"],
+    image: "/projects/cropiq.jpg",
+    github: "https://github.com/Madhumitha-Anand/MentalHealthKeywordAnalyzer.git",
+    demo: "",
+    featured: true,
+  },
+  {
+    title: "Fake Job Posting Detector",
+    description:
+      "Developed an NLP-based machine learning application to classify job postings as real, fake, or uncertain using TF-IDF and Logistic Regression. Built an interactive Streamlit interface and addressed real-world challenges such as class imbalance and prediction uncertainty.",
+    tags: ["Python", "NLP", "Machine Learning", "Logistic Regression", "Streamlit"],
+    image: "https://fakejobdetectorproject.streamlit.app/",
+    github: "https://github.com/Madhumitha-Anand/FakeJobDetector",
+    demo: "",
+    featured: false,
+  },
+ 
+];
+
+// ── EXPERIENCE ───────────────────────────────────────────────
+export const EXPERIENCE: Experience[] = [
+  {
+    role: "Data Science Intern",
+    company: "Spectrum Softtech Solutions",               // ← update
+    period: "Dec 2025 – Jan 2026",
+    location: "Kochi, India",
+    points: [
+      "Completed a mini project on Customer Segmentation with Kaggle datasets.",
+      "Implemented K-Means clustering to segment customers using unsupervised ML techniques.",
+      "Performed data preprocessing, feature selection, and EDA to identify customer patterns",
+    ],
+  },
+  {
+    role: "Data Engineering Virtual Internship",
+    company: "Forage",            // ← update
+    period: "Jan 2025 – Mar 2025",
+    location: "Remote",
+    points: [
+      "Assisted with ETL workflows and data processing under tight deadlines.",
+      "Generated concise analytical reports to support data-driven decision-making.",
+    ],
+  },
+  // ← Add more internships / jobs here
+];
+
+// ── EDUCATION ────────────────────────────────────────────────
+export const EDUCATION: Education[] = [
+  {
+    degree: "B.Tech Artificial Intelligence & Data Science",
+    institution: "Nehru Institute of Engineering and Technology",           // ← update
+    university: "Anna University",              // ← update if needed
+    period: "2023 – 2027",
+    cgpa: "8.7 / 10",                           // ← update
+    highlights: [
+      "Relevant coursework: ML, Deep Learning, NLP, Computer Vision, Big Data Analytics",
+      "Participated in technical workshops, coding events, or hackathons",
+    ],
+  },
+  {
+    degree: "Higher Secondary (Science — Computer Science)",
+    institution: "Palghat Lions School",            // ← update
+    university: "CBSE",
+    period: "2020 – 2022",
+    cgpa: "89%",                              // ← update
+    highlights: [],
+  },
+];
+
+// ── CERTIFICATIONS ───────────────────────────────────────────
+export const CERTIFICATIONS: Certification[] = [
+  {
+    name: "Google AI Essentials Specialization",
+    issuer: "Google / Coursera",
+    date: "2025",
+    url: "https://coursera.org/share/ba0fce1a711848e089e6cf6c07301a9d",   // ← update or remove
+  },
+  {
+    name: "Google Data Analytics",
+    issuer: "Google / Coursera",
+    date: "2025",
+    url: "https://coursera.org/share/424f571be619234c93732e8534548ea0",
+  },
+  {
+    name: "Google Business Intelligence",
+    issuer: "Google / Coursera",
+    date: "2024",
+    url: "https://coursera.org/share/1af45bff95dfcef20ef1e9bfcda3e884",
+  },
+  {
+    name: "Unsupervised Machine Learning",
+    issuer: "IBM / Coursera",
+    date: "2025",
+    url: "",
+  },
+  {
+    name: "Core Java",
+    issuer: "LearnQuest / Coursera",
+    date: "2025",
+    url: "https://coursera.org/share/0d6f49a43f7d649c4e9e079276cb6850",
+  },
+  {
+    name: "Python for Data Science, AI and Development",
+    issuer: "IBM / Coursera",
+    date: "2025",
+    url: "https://coursera.org/share/e7a13cbf9b10f0c487004f92d196f788",
+  }
+  // ← Add more certifications
+];
+
+// ── SOCIAL / CONTACT ─────────────────────────────────────────
+export const SOCIAL = {
+  github: "https://github.com/Madhumitha-Anand",          // ← update
+  linkedin: "https://www.linkedin.com/in/madhumithaaanand/",               // ← update or remove
+  email: "madhumithaa10a@gmail.com",                         // ← update
+};
+
+// ── TypeScript types (do not edit below this line) ──────────
+export interface SkillCategory {
+  category: string;
+  items: string[];
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  github: string;
+  demo: string;
+  featured: boolean;
+}
+
+export interface Experience {
+  role: string;
+  company: string;
+  period: string;
+  location: string;
+  points: string[];
+}
+
+export interface Education {
+  degree: string;
+  institution: string;
+  university: string;
+  period: string;
+  cgpa: string;
+  highlights: string[];
+}
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  date: string;
+  url: string;
+}
