@@ -195,11 +195,11 @@ export const CERTIFICATIONS: Certification[] = [
 
 // ── SOCIAL / CONTACT ─────────────────────────────────────────
 export const SOCIAL = {
-  github: "https://github.com/Madhumitha-Anand",          // ← update
-  linkedin: "https://www.linkedin.com/in/madhumithaaanand/",               // ← update or remove
-  email: "madhumithaa10a@gmail.com",                         // ← update
+  github: "https://github.com/Madhumitha-Anand",
+  linkedin: "https://linkedin.com/in/madhumitha-anand",
+  kaggle: "https://kaggle.com/madhumitha",
+  email: "madhumitha@example.com",
 };
-
 // ── TypeScript types (do not edit below this line) ──────────
 export interface SkillCategory {
   category: string;
